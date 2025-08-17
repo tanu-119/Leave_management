@@ -1,0 +1,267 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+/* App layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #111827, #0f1724);
+  color: #d1d5db;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sidebar button {
+  background: transparent;
+  color: #d1d5db;
+  border: none;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.sidebar button.active,
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+}
+
+/* Sidebar footer */
+.sidebar-footer {
+  margin-top: auto;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* Main column */
+.main-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: linear-gradient(180deg, #0b1220, #0f1724);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.btn-ghost {
+  background: transparent;
+  color: #cfe0ff;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Content */
+.content {
+  padding: 24px;
+  overflow: auto;
+}
+
+/* Cards and grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+/* KPI */
+.kpi {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.kpi-title {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.kpi-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+label {
+  font-size: 0.9rem;
+  color: #334155;
+  font-weight: 600;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6eef8;
+  font-size: 14px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.08);
+  border-color: #0ea5e9;
+}
+
+/* Buttons */
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+button.small {
+  padding: 6px 8px;
+  font-size: 13px;
+  margin-right: 6px;
+}
+button.small.outline {
+  background: transparent;
+  color: #374151;
+  border: 1px solid #e6eef8;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.table th,
+.table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: left;
+}
+.table th {
+  color: #475569;
+  font-weight: 700;
+}
+
+/* status styles */
+.status {
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+.status.pending {
+  background: #fff7ed;
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.08);
+}
+.status.approved {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+.status.rejected {
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+/* helpers */
+.table-scroll {
+  max-height: 340px;
+  overflow: auto;
+}
+.alert {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #fff7ed;
+  color: #92400e;
+  border-radius: 8px;
+}
+
+/* layout helpers */
+.section-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.balance {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f0f9ff;
+  border-radius: 8px;
+  border: 1px solid #dbeefe;
+}
+
+.help {
+  color: #64748b;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .section-row {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
