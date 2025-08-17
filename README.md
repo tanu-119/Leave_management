@@ -37,7 +37,6 @@ The project demonstrates **React (Frontend)**, **Node.js/Express (Backend APIs)*
    ```env
    PORT=5000
    MONGO_URI=mongodb://localhost:27017/leave_mgmt
-   JWT_SECRET=your-secret-key
    ```
 
 4. Start backend
